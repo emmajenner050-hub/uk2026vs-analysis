@@ -559,7 +559,7 @@ elif page == "👄 口感对比":
 elif page == "💡 结论与建议":
     st.markdown("<div class='sec-p'>💡 综合结论与策略建议</div>", unsafe_allow_html=True)
     st.markdown("""<div class='box-purple'>
-    本页汇总双源调研的全部核心洞察，内容可直接用于领导汇报。
+    本页汇总双源调研的全部核心洞察。
     结论基于 <b>线上100条榜单 + 线下12家门店</b> 交叉验证，置信度标注清晰。
     </div>""", unsafe_allow_html=True)
 
