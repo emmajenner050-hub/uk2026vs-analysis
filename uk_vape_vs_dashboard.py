@@ -185,7 +185,7 @@ with st.sidebar:
     st.markdown("### 🇬🇧 英国烟油双源看板")
     st.info("📌 当前线上榜单已过滤，仅统计 Nic Salt 数据（100条），Shortfill 已全部剔除。")
     st.markdown("---")
-    page = st.radio("", [
+    page = st.radio("导航菜单", [
         "📊 总览摘要",
         "🏷️ 品牌对比",
         "🍇 口味对比",
@@ -243,7 +243,7 @@ if page == "📊 总览摘要":
         df_cross.style
             .background_gradient(subset=['线下门店提及次数'], cmap='Greens')
             .background_gradient(subset=['线上榜单条目数'],   cmap='Blues')
-            .applymap(color_status, subset=['验证状态']),
+            .map(color_status, subset=['验证状态']),
         use_container_width=True, height=460
     )
     st.caption("✅ 双源印证：线下≥2次 且 线上≥2条  |  🔵 线上领先：线上≥3条但线下暂未反映  |  ⚠️ 线下独有：线下热销但线上无对应")
